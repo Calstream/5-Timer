@@ -13,7 +13,7 @@ namespace _5_timer
 {
     public partial class Form1 : Form
     {
-        private bool[] Labels;
+        private bool[] Labels = new bool[6];
         private int t = 0;
         private void reset_labels()
         {
@@ -123,20 +123,49 @@ namespace _5_timer
             }
         }
 
+        private void save_and_close()
+        {
+            using (StreamWriter sr = new StreamWriter("results.txt"))
+            {
+                foreach (var item in listBox1.Items)
+                {
+                   sr.WriteLine(item.ToString());
+                }
+            }
+            Dispose();
+        }
 
         private void Form1_FormClosing(object sender, EventArgs e)
         {
-
+            save_and_close();
         }
 
         private void last_label_Click(object sender, EventArgs e)
         {
+            if (!startToolStripMenuItem.Enabled)
+            {
+                Label lbl = sender as Label;
+                int num = 0;
+                Int32.TryParse(lbl.Name.ToString().Remove(0, 5), out num);
+                if (Labels[num - 1])
+                {
+                    lbl.BackColor = Color.GreenYellow;
+                    reset_labels();
+                    startToolStripMenuItem.Enabled = true;
+                    listBox1.Items.Add(textBox1.Text);
+                    textBox1.Text = "0,0";
+                    if (t > 100)
+                        MessageBox.Show("Вы проиграли");
+                    else MessageBox.Show("Вы выиграли");
+                    t = 0;
 
+                }
+            }
         }
 
         private void exitMenu_Click(object sender, EventArgs e)
         {
-
+            save_and_close();
         }
     }
 
