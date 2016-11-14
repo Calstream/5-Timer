@@ -24,5 +24,15 @@ namespace _5_timer_wpf
         {
             InitializeComponent();
         }
+
+        private void Start_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+           
+        }
     }
 }

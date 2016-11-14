@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_5_timer_wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="375" Width="540" ResizeMode="CanMinimize">
+    
+    
+    <Grid Background="#FFE4E4E4">
+        <Menu DockPanel.Dock="Top" BorderBrush="Black" BorderThickness="0" Height="20" VerticalAlignment="Top">
+            <MenuItem Header="_Commands">
+                <MenuItem Header="_Start" Click="Clear_Click"/>
+                <MenuItem Header="_Exit" Click="Exit_Click"/>
+                <Separator />
+            </MenuItem>
+        </Menu>
+        <Border BorderBrush="Black" BorderThickness="1">
+            <Canvas HorizontalAlignment="Left" Height="311" Margin="10,25,0,0" VerticalAlignment="Top" Width="341" Background="#FFF0F0F0" AutomationProperties.Name="panel1">
+                <Label x:Name="label" Content="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Canvas.Left="157" Canvas.Top="158" Background="#FFF9FF7D" BorderBrush="Black" BorderThickness = "1" Width="20" Height="20" FontFamily="Consolas" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+            </Canvas>
+
+        </Border>
     </Grid>
 </Window>
