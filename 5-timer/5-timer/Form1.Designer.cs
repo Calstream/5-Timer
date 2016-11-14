@@ -74,28 +74,28 @@
             this.startToolStripMenuItem.Name = "startToolStripMenuItem";
             this.startToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.startToolStripMenuItem.Text = "Start";
-            //this.startToolStripMenuItem.Click += new System.EventHandler(this.startMenu_Click);
+            this.startToolStripMenuItem.Click += new System.EventHandler(this.startMenu_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.exitToolStripMenuItem.Text = "Exit";
-            //this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitMenu_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitMenu_Click);
             // 
             // startMenu
             // 
             this.startMenu.Name = "startMenu";
             this.startMenu.Size = new System.Drawing.Size(152, 22);
             this.startMenu.Text = "Start";
-            //this.startMenu.Click += new System.EventHandler(this.startMenu_Click);
+            this.startMenu.Click += new System.EventHandler(this.startMenu_Click);
             // 
             // exitMenu
             // 
             this.exitMenu.Name = "exitMenu";
             this.exitMenu.Size = new System.Drawing.Size(152, 22);
             this.exitMenu.Text = "Exit";
-            //this.exitMenu.Click += new System.EventHandler(this.exitMenu_Click);
+            this.exitMenu.Click += new System.EventHandler(this.exitMenu_Click);
             // 
             // label1
             // 
@@ -107,7 +107,7 @@
             this.label1.Size = new System.Drawing.Size(20, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "1";
-            //this.label1.Click += new System.EventHandler(this.first_label_Click);
+            this.label1.Click += new System.EventHandler(this.first_label_Click);
             // 
             // label7
             // 
@@ -159,7 +159,7 @@
             this.label6.Size = new System.Drawing.Size(20, 20);
             this.label6.TabIndex = 6;
             this.label6.Text = "6";
-            //this.label6.Click += new System.EventHandler(this.last_label_Click);
+            this.label6.Click += new System.EventHandler(this.last_label_Click);
             // 
             // label5
             // 
@@ -171,7 +171,7 @@
             this.label5.Size = new System.Drawing.Size(20, 20);
             this.label5.TabIndex = 5;
             this.label5.Text = "5";
-            //this.label5.Click += new System.EventHandler(this.label_Click);
+            this.label5.Click += new System.EventHandler(this.label_Click);
             // 
             // label4
             // 
@@ -183,7 +183,7 @@
             this.label4.Size = new System.Drawing.Size(20, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "4";
-            //this.label4.Click += new System.EventHandler(this.label_Click);
+            this.label4.Click += new System.EventHandler(this.label_Click);
             // 
             // label3
             // 
@@ -195,7 +195,7 @@
             this.label3.Size = new System.Drawing.Size(20, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "3";
-            //this.label3.Click += new System.EventHandler(this.label_Click);
+            this.label3.Click += new System.EventHandler(this.label_Click);
             // 
             // label2
             // 
@@ -207,7 +207,7 @@
             this.label2.Size = new System.Drawing.Size(20, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "2";
-            //this.label2.Click += new System.EventHandler(this.label_Click);
+            this.label2.Click += new System.EventHandler(this.label_Click);
             // 
             // listBox1
             // 
@@ -230,7 +230,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            //this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -248,7 +248,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
-            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -279,5 +279,4 @@
         private System.Windows.Forms.Timer timer1;
     }
 }
-
 
