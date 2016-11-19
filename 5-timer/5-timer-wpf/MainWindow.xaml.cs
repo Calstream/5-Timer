@@ -23,6 +23,7 @@ namespace _5_timer_wpf
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void Start_Click(object sender, RoutedEventArgs e)
@@ -33,6 +34,11 @@ namespace _5_timer_wpf
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
            
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            label1.Width = label1.ActualHeight;
         }
     }
 }
