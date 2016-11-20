@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:_5_timer_wpf"
         xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="_5_timer_wpf.MainWindow"
         mc:Ignorable="d" SizeToContent="WidthAndHeight"
-        Title="MainWindow" Height="375" Width="540" Loaded="Window_Loaded" ResizeMode="CanMinimize">
+        Title="MainWindow" Height="388" Width="612" Loaded="Window_Loaded" ResizeMode="CanMinimize">
 
 
-    <StackPanel x:Name="stackPanel1" Background="#FFE4E4E4" Margin="0" Height="346" VerticalAlignment="Top">
+    <StackPanel x:Name="stackPanel1" Background="#FFE4E4E4" Margin="0" Height="365" VerticalAlignment="Top">
         <Menu IsMainMenu="True" Margin="0" Height="20" BorderThickness="0,0,0,1" BorderBrush="DarkGray" >
             <Menu.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -25,7 +25,7 @@
         </Menu>
         <StackPanel x:Name="stackPanel2" Orientation="Horizontal">
             <Border BorderThickness="1" BorderBrush="DarkGray" Margin="10,10,6,6">
-                <Canvas x:Name="canvas1" Width="300" Height="300" Background="GhostWhite">
+                <Canvas x:Name="canvas1" Width="419" Height="322" Background="GhostWhite">
                     <Canvas.Resources>
                         <Style x:Name="Canvas1" x:Key="labelstyle">
                             <Setter Property="Control.BorderBrush" Value="Black"/>
@@ -37,17 +37,19 @@
                             <Setter Property="Control.HorizontalContentAlignment" Value="Center"/>
                         </Style>
                     </Canvas.Resources>
-                    <Label x:Name="label1" Content="1" Style="{StaticResource labelstyle}" Canvas.Left="56" Canvas.Top="73"/>
-                    <Label x:Name="label2" Content="2" Style="{StaticResource labelstyle}" Canvas.Left="56" Canvas.Top="186"/>
-                    <Label x:Name="label3" Content="3" Style="{StaticResource labelstyle}" Canvas.Left="182" Canvas.Top="73"/>
-                    <Label x:Name="label4" Content="4" Style="{StaticResource labelstyle}" Canvas.Left="119" Canvas.Top="73"/>
-                    <Label x:Name="label5" Content="5" Style="{StaticResource labelstyle}" Canvas.Left="119" Canvas.Top="186"/>
-                    <Label x:Name="label6" Content="6" Style="{StaticResource labelstyle}" Canvas.Left="182" Canvas.Top="186"/>
+                    <Label x:Name="label1" Content="1" Style="{StaticResource labelstyle}" Canvas.Left="10" Canvas.Top="10"/>
+                    <Label x:Name="label2" Content="2" Style="{StaticResource labelstyle}" Canvas.Left="390" Canvas.Top="10"/>
+                    <Label x:Name="label3" Content="3" Style="{StaticResource labelstyle}" Canvas.Left="390" Canvas.Top="286"/>
+                    <Label x:Name="label4" Content="4" Style="{StaticResource labelstyle}" Canvas.Left="10" Canvas.Top="286"/>
+                    <Label x:Name="label5" Content="5" Style="{StaticResource labelstyle}" Canvas.Left="141" Canvas.Top="127"/>
+                    <Label x:Name="label6" Content="6" Style="{StaticResource labelstyle}" Canvas.Left="274" Canvas.Top="127"/>
                 </Canvas>
             </Border>
             <StackPanel x:Name="stackPanel3">
                 <Label Content="Результаты" FontFamily="Microsoft Sans Serif" FontSize="14" HorizontalContentAlignment="Center"/>
-                <ListBox x:Name="listbox1" Width="153" Height="225"/>
+                <ListBox x:Name="listbox1" Width="153" Height="225" Margin="7,0,13,0"/>
+                <Label Content="Время" FontFamily="Microsoft Sans Serif" FontSize="24" HorizontalContentAlignment="Center"/>
+                <TextBox x:Name="textbox1" IsReadOnly="True" Width="100" Text="0,0" FontFamily="Microsoft Sans Serif" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="28"/>
             </StackPanel>
 
         </StackPanel>

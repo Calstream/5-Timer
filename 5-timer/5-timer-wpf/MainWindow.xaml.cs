@@ -22,6 +22,7 @@ namespace _5_timer_wpf
     {
         private bool[] Labels = new bool[6];
         private int t = 0;
+
         private void reset_labels()
         {
             for (int i = 0; i < 6; i++)
