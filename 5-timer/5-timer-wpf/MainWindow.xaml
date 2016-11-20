@@ -6,11 +6,17 @@
         xmlns:local="clr-namespace:_5_timer_wpf"
         xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="_5_timer_wpf.MainWindow"
         mc:Ignorable="d" SizeToContent="WidthAndHeight"
-        Title="MainWindow" Height="375" Width="540" ResizeMode="CanMinimize" Loaded="Window_Loaded">
+        Title="MainWindow" Height="375" Width="540" Loaded="Window_Loaded" ResizeMode="CanMinimize">
 
 
-    <StackPanel x:Name="stackPanel1" Background="#FFE4E4E4" Margin="0" Height="346" VerticalAlignment="Bottom">
-        <Menu IsMainMenu="True" Margin="0" >
+    <StackPanel x:Name="stackPanel1" Background="#FFE4E4E4" Margin="0" Height="346" VerticalAlignment="Top">
+        <Menu IsMainMenu="True" Margin="0" Height="20" BorderThickness="0,0,0,1" BorderBrush="DarkGray" >
+            <Menu.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCED5D6" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Menu.Background>
             <MenuItem Header="_Commands">
                 <MenuItem Header="_Start" Click="Start_Click"/>
                 <MenuItem Header="_Exit" Click="Exit_Click"/>
@@ -18,8 +24,8 @@
             </MenuItem>
         </Menu>
         <StackPanel x:Name="stackPanel2" Orientation="Horizontal">
-            <Border BorderThickness="1" BorderBrush="Black">
-                <Canvas x:Name="canvas1" Width="300" Height="300">
+            <Border BorderThickness="1" BorderBrush="DarkGray" Margin="10">
+                <Canvas x:Name="canvas1" Width="300" Height="300" Background="GhostWhite">
                     <Canvas.Resources>
                         <Style x:Name="Canvas1" x:Key="labelstyle">
                             <Setter Property="Control.BorderBrush" Value="Black"/>
@@ -37,13 +43,11 @@
                     <Label x:Name="label4" Content="4" Style="{StaticResource labelstyle}" Canvas.Left="119" Canvas.Top="73"/>
                     <Label x:Name="label5" Content="5" Style="{StaticResource labelstyle}" Canvas.Left="119" Canvas.Top="186"/>
                     <Label x:Name="label6" Content="6" Style="{StaticResource labelstyle}" Canvas.Left="182" Canvas.Top="186"/>
-
-
-
                 </Canvas>
             </Border>
             <StackPanel x:Name="stackPanel3">
-                <Label Content="Результаты"/>
+                <Label Content="Результаты" FontFamily="Microsoft Sans Serif" FontSize="14" HorizontalContentAlignment="Center"/>
+                <ListBox x:Name="listbox1" Width="153" Height="225"/>
             </StackPanel>
 
         </StackPanel>
