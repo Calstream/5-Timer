@@ -9,7 +9,7 @@
         Title="MainWindow" Height="375" Width="540" ResizeMode="CanMinimize" Loaded="Window_Loaded">
 
 
-    <StackPanel Background="#FFE4E4E4" Margin="0" Height="346" VerticalAlignment="Bottom">
+    <StackPanel x:Name="stackPanel1" Background="#FFE4E4E4" Margin="0" Height="346" VerticalAlignment="Bottom">
         <Menu IsMainMenu="True" Margin="0" >
             <MenuItem Header="_Commands">
                 <MenuItem Header="_Start" Click="Start_Click"/>
@@ -17,29 +17,32 @@
                 <Separator />
             </MenuItem>
         </Menu>
-    <StackPanel Orientation="Horizontal">
+        <StackPanel x:Name="stackPanel2" Orientation="Horizontal">
             <Border BorderThickness="1" BorderBrush="Black">
-                <Canvas Width="300" Height="300">
+                <Canvas x:Name="canvas1" Width="300" Height="300">
                     <Canvas.Resources>
-                        <Style x:Key="labelstyle">
+                        <Style x:Name="Canvas1" x:Key="labelstyle">
                             <Setter Property="Control.BorderBrush" Value="Black"/>
                             <Setter Property="Control.BorderThickness" Value="1"/>
                             <Setter Property="Control.Background" Value="Gold"/>
-                            <Setter Property="Control.FontFamily" Value="Consolas"/>
+                            <Setter Property="Control.FontFamily" Value="Arial"/>
                             <Setter Property="Control.FontWeight" Value="Bold"/>
                             <Setter Property="Control.FontSize" Value="12"/>
                             <Setter Property="Control.HorizontalContentAlignment" Value="Center"/>
                         </Style>
                     </Canvas.Resources>
-                    <Label x:Name="label1" BorderBrush="Black" Background="Gold" Content="1" FontFamily="Consolas" FontWeight="Bold" FontSize="12" HorizontalContentAlignment="Center" BorderThickness="1">
-                    </Label>
-                    <Label Content="2" Canvas.Left="78" Canvas.Top="40"
-                           Style="{StaticResource label}"/>
+                    <Label x:Name="label1" Content="1" Style="{StaticResource labelstyle}" Canvas.Left="56" Canvas.Top="73"/>
+                    <Label x:Name="label2" Content="2" Style="{StaticResource labelstyle}" Canvas.Left="56" Canvas.Top="186"/>
+                    <Label x:Name="label3" Content="3" Style="{StaticResource labelstyle}" Canvas.Left="182" Canvas.Top="73"/>
+                    <Label x:Name="label4" Content="4" Style="{StaticResource labelstyle}" Canvas.Left="119" Canvas.Top="73"/>
+                    <Label x:Name="label5" Content="5" Style="{StaticResource labelstyle}" Canvas.Left="119" Canvas.Top="186"/>
+                    <Label x:Name="label6" Content="6" Style="{StaticResource labelstyle}" Canvas.Left="182" Canvas.Top="186"/>
+
 
 
                 </Canvas>
             </Border>
-            <StackPanel>
+            <StackPanel x:Name="stackPanel3">
                 <Label Content="Результаты"/>
             </StackPanel>
 

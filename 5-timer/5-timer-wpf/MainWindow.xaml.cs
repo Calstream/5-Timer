@@ -38,7 +38,12 @@ namespace _5_timer_wpf
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            label1.Width = label1.ActualHeight;
+            foreach (var c in canvas1.Children)
+            {
+                Label l = c as Label;
+                l.Width = l.ActualHeight;
+            }
+            
         }
     }
 }
