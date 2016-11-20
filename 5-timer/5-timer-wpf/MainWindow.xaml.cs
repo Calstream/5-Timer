@@ -46,8 +46,7 @@ namespace _5_timer_wpf
             }
             DispatcherTimer dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Tick += dispatcherTimer_Tick;
-            //dispatcherTimer.Interval = TimeSpan.FromMilliseconds(10);
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 1);
+            dispatcherTimer.Interval = TimeSpan.FromMilliseconds(50);
             dispatcherTimer.Start();
         }
 
@@ -55,7 +54,6 @@ namespace _5_timer_wpf
         {
             if (!StartButton.IsEnabled)
             {
-                
                 ++t;
                 textbox1.Text = string.Format("{0},{1}", t / 10, t % 10);
             }
