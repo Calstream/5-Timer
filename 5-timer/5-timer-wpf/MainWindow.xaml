@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:_5_timer_wpf"
         xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="_5_timer_wpf.MainWindow"
         mc:Ignorable="d" SizeToContent="WidthAndHeight"
-        Title="MainWindow" Height="388" Width="612" Loaded="Window_Loaded" ResizeMode="CanMinimize">
+        Title="MainWindow" Height="388" Width="612" Loaded="Window_Loaded" ResizeMode="CanMinimize" Closing="Window_Closing">
 
 
     <StackPanel x:Name="stackPanel1" Background="#FFE4E4E4" Margin="0" Height="365" VerticalAlignment="Top">
@@ -18,8 +18,8 @@
                 </LinearGradientBrush>
             </Menu.Background>
             <MenuItem Header="_Commands">
-                <MenuItem Header="_Start" Click="Start_Click"/>
-                <MenuItem Header="_Exit" Click="Exit_Click"/>
+                <MenuItem x:Name="StartButton"  Header="Start" Click="Start_Click"/>
+                <MenuItem x:Name="ExitButton" Header="Exit" Click="Exit_Click"/>
                 <Separator />
             </MenuItem>
         </Menu>
@@ -37,12 +37,12 @@
                             <Setter Property="Control.HorizontalContentAlignment" Value="Center"/>
                         </Style>
                     </Canvas.Resources>
-                    <Label x:Name="label1" Content="1" Style="{StaticResource labelstyle}" Canvas.Left="10" Canvas.Top="10"/>
-                    <Label x:Name="label2" Content="2" Style="{StaticResource labelstyle}" Canvas.Left="390" Canvas.Top="10"/>
-                    <Label x:Name="label3" Content="3" Style="{StaticResource labelstyle}" Canvas.Left="390" Canvas.Top="286"/>
-                    <Label x:Name="label4" Content="4" Style="{StaticResource labelstyle}" Canvas.Left="10" Canvas.Top="286"/>
-                    <Label x:Name="label5" Content="5" Style="{StaticResource labelstyle}" Canvas.Left="141" Canvas.Top="127"/>
-                    <Label x:Name="label6" Content="6" Style="{StaticResource labelstyle}" Canvas.Left="274" Canvas.Top="127"/>
+                    <Label x:Name="label1" Content="1" Style="{StaticResource labelstyle}" Canvas.Left="10" Canvas.Top="10" MouseDown="first_label_Click"/>
+                    <Label x:Name="label2" Content="2" Style="{StaticResource labelstyle}" Canvas.Left="390" Canvas.Top="10" MouseDown="label_Click"/>
+                    <Label x:Name="label3" Content="3" Style="{StaticResource labelstyle}" Canvas.Left="390" Canvas.Top="286" MouseDown="label_Click"/>
+                    <Label x:Name="label4" Content="4" Style="{StaticResource labelstyle}" Canvas.Left="10" Canvas.Top="286" MouseDown="label_Click"/>
+                    <Label x:Name="label5" Content="5" Style="{StaticResource labelstyle}" Canvas.Left="141" Canvas.Top="127" MouseDown="label_Click"/>
+                    <Label x:Name="label6" Content="6" Style="{StaticResource labelstyle}" Canvas.Left="274" Canvas.Top="127" MouseDown="last_label_Click"/>
                 </Canvas>
             </Border>
             <StackPanel x:Name="stackPanel3">
