@@ -24,7 +24,7 @@
             </MenuItem>
         </Menu>
         <StackPanel x:Name="stackPanel2" Orientation="Horizontal">
-            <Border BorderThickness="1" BorderBrush="DarkGray" Margin="10">
+            <Border BorderThickness="1" BorderBrush="DarkGray" Margin="10,10,6,6">
                 <Canvas x:Name="canvas1" Width="300" Height="300" Background="GhostWhite">
                     <Canvas.Resources>
                         <Style x:Name="Canvas1" x:Key="labelstyle">
